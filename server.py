@@ -61,9 +61,9 @@ def quickSort(scoreboard, start, end):
     pivot = scoreboard[mid]["score"]
     
     while (left <= right):
-        while (left <= right and scoreboard[left]["score"] < pivot):
+        while (left <= right and scoreboard[left]["score"] > pivot):
             left += 1
-        while (left <= right and scoreboard[right]["score"] > pivot):
+        while (left <= right and scoreboard[right]["score"] < pivot):
             right -= 1
         if (left <= right):
             scoreboard[left], scoreboard[right] = scoreboard[right], scoreboard[left]
